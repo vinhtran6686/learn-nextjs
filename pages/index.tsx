@@ -12,16 +12,7 @@ import Layout from "../components/Layout";
 const Home = () => {
   return (
     <Layout>
-      <h1>Hello Next.js</h1>
-      {/* <ul>
-        {props.shows.map(({ show }) => (
-          <li key={show.id}>
-            <Link as={`/postDetail/${show.id}`} href={`/postDetail?id=${show.name}`}>
-              <a>{show.name}</a>
-            </Link>
-          </li>
-        ))}
-      </ul> */}
+      <h1>Hello Next.js</h1> 
     </Layout>
   );
 };

@@ -15,4 +15,4 @@ export async function getStaticPaths(abc: any) {
     props: {},
   };
 }
-export default Slug;
+export default Slug; 
