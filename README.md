@@ -8,6 +8,7 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+cross-env PORT=6686 npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
