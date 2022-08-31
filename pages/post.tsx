@@ -27,6 +27,15 @@ const Post: React.FC<IProps> = ({ shows }) => (
         <PostLink key={index} id={show.id} name={show.name} />
       ))}
     </ul>
+    <ul>
+      {shows.map(({ show }, index) => (
+        <li key={index}>
+          <Link as={`/post/${show.id}`} href={`/post/${show.name}`}>
+            <a>{show.name}</a>
+          </Link>
+        </li>
+      ))}
+    </ul>
   </Layout>
 );
 export async function getStaticProps() {
