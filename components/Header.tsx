@@ -1,11 +1,23 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const linkStyle = {
   marginRight: 15,
 };
 
-const Header = () => (
-  <div>
+const Header = () =>{
+  const router = useRouter();
+  const gotoPhoto = () =>{
+    router.push({
+      pathname: '/photos/[photoId]',
+      query: {
+        photoId: 123,
+        ref: 'social',
+      },
+    })
+  }
+  return (
+    <div>
     <Link href="/">
       <a style={linkStyle}>Home</a>
     </Link>
@@ -22,7 +34,9 @@ const Header = () => (
     <Link href="/photos/create">
       <a style={linkStyle}>Create Photos</a>
     </Link>
+    <button onClick={gotoPhoto}>Goto Photo by Click</button>
   </div>
-);
+  )
+};
 
 export default Header;
